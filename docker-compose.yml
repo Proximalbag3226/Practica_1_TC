@@ -1,0 +1,26 @@
+services:
+  app_python_311:
+    build: ./py311
+    container_name: contenedor_py311
+    volumes:
+      - ./py311:/app
+      - doc_venv_311:/app/doc_venv
+
+  app_python_312:
+    build: ./py312
+    container_name: contenedor_py312
+    volumes:
+      - ./py312:/app
+      - doc_venv_312:/app/doc_venv
+
+  app_python_313:
+    build: ./py313
+    container_name: contenedor_py313
+    volumes:
+      - ./py313:/app
+      - doc_venv_313:/app/doc_venv
+
+volumes:
+  doc_venv_311:
+  doc_venv_312:
+  doc_venv_313:
